@@ -111,3 +111,10 @@ A sua tarefa: Escreva um programa que:
 - Informe todas as posições onde o motivo ocorre.
 - Se o motivo não existir, exiba mensagem apropriada.
 
+
+## Resumo do Módulo
+
+- Condicionais (if/else/elif) permitem que programas tomem decisões.
+- Loops (for e while) permitem repetir instruções.
+- Estruturas de controle são essenciais para análise de sequências biológicas.
+- Aplicação prática: buscar motivos (como códons ou padrões) em sequências de DNA.
