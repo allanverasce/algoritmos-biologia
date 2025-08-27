@@ -54,8 +54,22 @@ cientista = True # booleano
 print(idade, altura, nome, cientista)
 ```
 
+Operadores
 
+- Aritméticos: + - * / % ** //
 
+- Relacionais: == != > < >= <=
+
+- Lógicos: and, or, not
+
+```
+a = 10
+b = 3
+print("Soma:", a + b)
+print("Divisão inteira:", a // b)
+print("Potência:", a ** b)
+print("Comparação:", a > b)
+``
 
 
 
