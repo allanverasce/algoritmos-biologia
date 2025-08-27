@@ -172,6 +172,24 @@ print("Logaritmo natural de 10:", math.log(10))
 print("Seno de 90°:", math.sin(math.radians(90)))
 ```
 
+## Agora veja o exemplo utilizando formatação de Strings na mensagem e cálculos também
+```
+# Exemplo: calcular a porcentagem de alunos aprovados em uma turma
+
+# Número total de alunos
+total_alunos = 40
+
+# Número de alunos aprovados
+alunos_aprovados = 28
+
+# Cálculo da porcentagem
+porcentagem_aprovados = (alunos_aprovados / total_alunos) * 100 #Se você quiser pode usar a função para arendondar e definir as casas decimais.
+
+print(f"Total de alunos: {total_alunos}") #Note que temos uma formatação da mensagem aqui 
+print(f"Alunos aprovados: {alunos_aprovados}")
+print(f"Porcentagem de aprovados: {porcentagem_aprovados:.2f}%")
+```
+
 ## Resumo do Módulo
 
 - Algoritmo = conjunto de passos para resolver um problema.
