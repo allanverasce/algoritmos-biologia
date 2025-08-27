@@ -34,4 +34,15 @@ else:
     print("Idoso")
 ```
 
+## 2. Estruturas de Repetição (Loops)
 
+Os loops permitem que um bloco de código seja repetido várias vezes.
+
+**2.1 for**
+
+Usado quando sabemos quantas vezes queremos repetir.
+
+```
+for i in range(5):
+    print("Repetição número:", i)
+```
