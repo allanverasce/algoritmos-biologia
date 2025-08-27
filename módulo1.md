@@ -21,6 +21,7 @@ Um **algoritmo** é um conjunto de instruções bem definidas, finitas e ordenad
 ### Exemplo em Pseudocódigo
 Encontrar o maior de dois números:
 
+```
 início
 ler A
 ler B
@@ -29,8 +30,7 @@ escreva "A é maior"
 senão
 escreva "B é maior"
 fim
-
-
+```
 ---
 
 ## 2. Variáveis, Tipos de Dados e Operadores em Python
@@ -44,14 +44,15 @@ Uma **variável** é um espaço na memória usado para armazenar informações.
 - `bool` → valores lógicos (True/False)
 
 ### Exemplo em Python
-```python
+
+```
 idade = 25       # inteiro
 altura = 1.75    # float
 nome = "Ana"     # string
 cientista = True # booleano
 
 print(idade, altura, nome, cientista)
-
+```
 
 
 
