@@ -1,4 +1,4 @@
-# Módulo 2 – Estruturas de Controle (10h)
+# Módulo 2 – Estruturas de Controle
 
 ## Objetivos de Aprendizagem
 - Entender como funcionam estruturas condicionais (`if`, `else`, `elif`) em Python.
