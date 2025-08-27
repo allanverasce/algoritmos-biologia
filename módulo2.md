@@ -55,3 +55,36 @@ for base in dna:
     print("Base encontrada:", base)
 ```
 
+**2.2 while**
+
+Usado quando queremos repetir até que uma condição seja falsa.
+
+```
+contador = 0
+while contador < 5:
+    print("Contador:", contador)
+    contador += 1
+```
+
+## 3. Exemplos de Aplicações em Biologia
+**Exemplo Biológico 1:**
+As estruturas de controle são úteis, por exemplo, para analisar sequências de DNA, buscar motivos ou percorrer listas de genes.
+
+```
+dna = "ATGCGATACGTAGCGTAGC"
+motivo = "ATG"
+
+if motivo in dna:
+    print("Motivo encontrado na sequência!")
+else:
+    print("Motivo não encontrado.")
+```
+
+**Exemplo Biológico 2:**
+```
+dna = "ATGCGATACGTAGCGTAGC"
+
+for base in dna:
+    print(base)
+```
+
