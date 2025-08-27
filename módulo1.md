@@ -79,4 +79,21 @@ Exemplo
 nome = input("Digite seu nome: ")
 idade = int(input("Digite sua idade: "))
 print("Olá,", nome, "! Você tem", idade, "anos.")
-``
+```
+## 4. Manipulação de Strings
+
+Strings são fundamentais em bioinformática porque sequências de DNA, RNA e proteínas são representadas como textos.
+
+Operações comuns:
+```
+dna = "ATGCGTAC"
+
+print(len(dna))       # tamanho da string
+print(dna[0])         # primeiro caractere (A)
+print(dna[-1])        # último caractere (C)
+print(dna.lower())    # minúsculas
+print(dna.count("A")) # contar quantos 'A'
+print(dna.replace("T", "U")) # DNA -> RNA
+```
+
+
