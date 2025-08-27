@@ -55,11 +55,8 @@ print(idade, altura, nome, cientista)
 ```
 
 Operadores
-
 - Aritméticos: + - * / % ** //
-
 - Relacionais: == != > < >= <=
-
 - Lógicos: and, or, not
 
 ```
@@ -69,9 +66,5 @@ print("Soma:", a + b)
 print("Divisão inteira:", a // b)
 print("Potência:", a ** b)
 print("Comparação:", a > b)
-``
-
-
-
-
+```
 
