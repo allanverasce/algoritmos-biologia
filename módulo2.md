@@ -21,5 +21,17 @@ elif outra_condição:
 else:
     # bloco se todas as condições forem falsas
 ```
+Exemplo de utilização
+
+```
+idade = 20
+
+if idade < 18:
+    print("Menor de idade")
+elif idade >= 18 and idade < 60:
+    print("Adulto")
+else:
+    print("Idoso")
+```
 
 
