@@ -95,5 +95,21 @@ print(dna.lower())    # minúsculas
 print(dna.count("A")) # contar quantos 'A'
 print(dna.replace("T", "U")) # DNA -> RNA
 ```
+## 5. Exemplo de manipulação de String com dado Biológico: Contagem de Nucleotídeos em DNA
+
+```
+dna = "ATGCGATACGCTTGA"
+
+count_A = dna.count("A")
+count_T = dna.count("T")
+count_G = dna.count("G")
+count_C = dna.count("C")
+
+print("Frequência de nucleotídeos:")
+print("A:", count_A)
+print("T:", count_T)
+print("G:", count_G)
+print("C:", count_C)
+```
 
 
