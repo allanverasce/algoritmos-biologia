@@ -162,7 +162,8 @@ Função	Descrição	Exemplo
 - min(a, b, c)	Menor valor	min(4,7,2) → 2
 
 Para usar a biblioteca math é necessário fazer o import, veja o exemplo:
-``
+
+```
 import math
 
 print("Raiz quadrada:", math.sqrt(16))
@@ -170,7 +171,6 @@ print("Número pi:", math.pi)
 print("Logaritmo natural de 10:", math.log(10))
 print("Seno de 90°:", math.sin(math.radians(90)))
 ```
-
 
 ## Resumo do Módulo
 
