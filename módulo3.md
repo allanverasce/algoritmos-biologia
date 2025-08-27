@@ -152,5 +152,4 @@ Ao final, o aluno deverá ser capaz de:
 
 ---
 
-Quer que eu escreva esse **mesmo módulo 3** já formatado como se fosse o **material de apostila** (com explicações teóricas + exemplos resolvidos + exercícios propostos para os alunos)?
 
