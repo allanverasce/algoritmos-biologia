@@ -1,4 +1,4 @@
-# Módulo 1 – Fundamentos de Programação (10h)
+# Módulo 1 – Fundamentos de Programação
 
 ## Objetivos de Aprendizagem
 - Compreender o que é um algoritmo.
