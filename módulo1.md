@@ -120,3 +120,12 @@ Escreva um programa que:
 - Calcule quantos A, T, G, C existem.
 - Mostre a porcentagem de cada base na sequência.
 
+
+## Resumo do Módulo
+
+- Algoritmo = conjunto de passos para resolver um problema.
+- Variáveis armazenam dados, podem ser de tipos diferentes.
+- Python usa operadores aritméticos, lógicos e relacionais.
+- Entrada/saída é feita com input() e print().
+- Strings são fundamentais em bioinformática (sequências).
+- Exemplo aplicado: contagem de nucleotídeos em DNA.
