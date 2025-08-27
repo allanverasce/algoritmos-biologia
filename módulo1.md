@@ -67,4 +67,10 @@ print("Divisão inteira:", a // b)
 print("Potência:", a ** b)
 print("Comparação:", a > b)
 ```
+## 3. Entrada e Saída de Dados
 
+Em Python usamos:
+
+- input() → entrada do usuário
+- print() → saída no console
+Exemplo
