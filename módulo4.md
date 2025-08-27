@@ -1,6 +1,3 @@
-Aqui está o **Módulo 4 – Funções e Modularização (5h)**, escrito de forma completa, com explicações, exemplos práticos aplicados à biologia e exercícios:
-
----
 
 # Módulo 4 – Funções e Modularização (5h)
 
