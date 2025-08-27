@@ -112,4 +112,11 @@ print("G:", count_G)
 print("C:", count_C)
 ```
 
+## 6. Exercício Prático
+
+Tarefa:
+Escreva um programa que:
+- Peça ao usuário para digitar uma sequência de DNA.
+- Calcule quantos A, T, G, C existem.
+- Mostre a porcentagem de cada base na sequência.
 
