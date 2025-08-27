@@ -1,6 +1,6 @@
 # 📘 Algoritmos Aplicados à Biologia
 
-Este repositório contém material para a disciplina **Algoritmos Aplicados à Biologia**, cobrindo desde conceitos básicos de programação até aplicações práticas em bioinformática.
+Este repositório contém material para a disciplina **Algoritmos I - Aplicados à Biologia**, cobrindo desde conceitos básicos de programação até aplicações práticas em bioinformática.
 
 ---
 
