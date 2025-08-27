@@ -148,7 +148,7 @@ print("Quantidade de A:", dna.count("a"))
 print("Posição da primeira ocorrência de G:", dna.find("g"))
 print("DNA para RNA:", dna.replace("t", "u"))
 print("Sequência invertida:", dna[::-1])
-``
+```
 
 ## Funções Matemáticas
 
