@@ -30,6 +30,7 @@ senão
 escreva "B é maior"
 fim
 
+
 ---
 
 ## 2. Variáveis, Tipos de Dados e Operadores em Python
