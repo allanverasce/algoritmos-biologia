@@ -46,3 +46,12 @@ Usado quando sabemos quantas vezes queremos repetir.
 for i in range(5):
     print("Repetição número:", i)
 ```
+Exemplo Biológico 1: Percorrer uma sequência de DNA
+
+```
+dna = "ATGCGT"
+
+for base in dna:
+    print("Base encontrada:", base)
+```
+
