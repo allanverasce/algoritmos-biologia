@@ -102,4 +102,12 @@ for i in range(len(dna) - len(motivo) + 1):
 print("Motivo encontrado nas posições:", posicoes)
 ```
 
+## 4. Vamos treinar? --> Exercício Prático
+
+A sua tarefa: Escreva um programa que:
+
+- Peça ao usuário uma sequência de DNA.
+- Peça um motivo (substring) para buscar.
+- Informe todas as posições onde o motivo ocorre.
+- Se o motivo não existir, exiba mensagem apropriada.
 
