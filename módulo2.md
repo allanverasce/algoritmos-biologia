@@ -67,7 +67,7 @@ while contador < 5:
 ```
 
 ## 3. Exemplos de Aplicações em Biologia
-**Exemplo Biológico 1:**
+**Exemplo Biológico 1:** </br>
 As estruturas de controle são úteis, por exemplo, para analisar sequências de DNA, buscar motivos ou percorrer listas de genes.
 
 ```
@@ -87,4 +87,19 @@ dna = "ATGCGATACGTAGCGTAGC"
 for base in dna:
     print(base)
 ```
+
+**Exemplo Biológico 3:**
+Vamos melhorar esse exemplo? ->  Procurando todas as ocorrências de um motivo
+```
+dna = "ATGCGATGATGTAG"
+motivo = "ATG"
+posicoes = []
+
+for i in range(len(dna) - len(motivo) + 1):
+    if dna[i:i+len(motivo)] == motivo:
+        posicoes.append(i)
+
+print("Motivo encontrado nas posições:", posicoes)
+```
+
 
