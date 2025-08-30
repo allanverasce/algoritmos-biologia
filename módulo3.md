@@ -92,24 +92,114 @@ Após remoção: ['BRCA1', 'TP53', 'EGFR', 'PTEN']
 Primeiro gene da lista: BRCA1
 ```
 
-## Exemplo 3 (Biologia): Exemplo: Lista de nucleotídeos
+#  O que são **Tuplas** em Python?
+
+* Uma **tupla** é uma **coleção ordenada de elementos**, muito parecida com uma **lista**.
+* **Diferença principal:** **tuplas são imutáveis**, ou seja, **não podem ser alteradas após a criação**.
+* Isso significa que, ao contrário das listas, você **não pode adicionar, remover ou modificar elementos** dentro de uma tupla.
+
+Tuplas são definidas com **parênteses `()`**, enquanto listas usam colchetes `[]`.
+
+---
+
+##  Principais características das tuplas
+
+1. **Imutáveis:** depois de criadas, não podem ser alteradas.
+2. **Ordenadas:** cada elemento tem um índice (começando do 0).
+3. **Podem armazenar tipos diferentes de dados:** números, strings, listas, etc.
+4. **Mais eficientes que listas:** como não podem mudar, ocupam menos memória e são mais rápidas para acessar.
+5. **Boa prática:** usar tuplas quando você quer garantir que os dados não serão modificados.
+
+---
+
+##  Exemplo 1: Sequência de DNA como tupla
+
 ```python
-nucleotideos = ["A", "T", "G", "C"]
-print(nucleotideos[0])  # A
-nucleotideos.append("A")
-print(nucleotideos)
-```
-
-### **Tuplas**
-
-* São imutáveis (não podem ser alteradas após a criação).
-* Úteis para armazenar dados que não devem mudar.
-
-```python
-# Exemplo: Uma sequência de DNA imutável
+# Criando uma tupla de nucleotídeos
 dna_tuple = ("A", "T", "G", "C")
+
+# Acessando elementos por índice
 print(dna_tuple[2])  # G
+
+# Iterando sobre a tupla
+for base in dna_tuple:
+    print(base, end=" ")  # A T G C
 ```
+
+Aqui, a tupla representa nucleotídeos fixos, que **não devem ser alterados**.
+
+---
+
+## Exemplo 2: Comparação entre lista e tupla
+
+```python
+# Lista (mutável)
+lista_dna = ["A", "T", "G", "C"]
+lista_dna.append("A")  # funciona
+print(lista_dna)  # ['A', 'T', 'G', 'C', 'A']
+
+# Tupla (imutável)
+tupla_dna = ("A", "T", "G", "C")
+# tupla_dna.append("A")  # ERRO! Não é permitido
+```
+## Dica do Allan kkkk
+Use **lista** se os dados mudam.
+Use **tupla** se os dados devem ser **fixos e protegidos**.
+
+---
+
+## Exemplo 3: Coordenadas de um gene (imutáveis)
+
+Muitas vezes, em bioinformática, precisamos representar dados que **não mudam**, como **a posição de um gene em um cromossomo**.
+
+```python
+# (cromossomo, posição_inicial, posição_final, fita)
+gene_coords = ("chr1", 1500, 3000, "+")
+
+print("Gene no cromossomo:", gene_coords[0])
+print("Início:", gene_coords[1])
+print("Fim:", gene_coords[2])
+print("Fita:", gene_coords[3])
+```
+
+Aqui, usamos uma tupla porque as coordenadas **não devem ser alteradas** durante a análise.
+
+---
+
+## Exemplo 4: Uso de tupla para retorno de função
+
+Funções podem retornar múltiplos valores em forma de tupla.
+
+```python
+def estatisticas_dna(seq):
+    return (seq.count("A"), seq.count("T"), seq.count("G"), seq.count("C"))
+
+dna = "ATGCGATATG"
+contagem = estatisticas_dna(dna)
+
+print("Contagem (A, T, G, C):", contagem)
+```
+
+Saída Esperada:
+
+```
+Contagem (A, T, G, C): (3, 3, 2, 2)
+```
+
+---
+
+# Resumindo
+
+* **Listas (`[]`)** → mutáveis, ideais para dados que mudam.
+* **Tuplas (`()`)** → imutáveis, ideais para dados **fixos**.
+* Em **biologia**, tuplas podem representar coisas como:
+
+  * **Coordenadas fixas** de genes.
+  * **Pares de bases** ou **motivos conservados**.
+  * **Resultados imutáveis** de funções (como contagens de nucleotídeos).
+
+
+
 
 ### **Dicionários**
 
