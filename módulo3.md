@@ -6,13 +6,94 @@ Este módulo introduz as **estruturas de dados fundamentais do Python** (listas,
 
 ##  1. Estruturas de Dados em Python
 
-### **Listas**
+## O que são **listas** em Python?
 
-* São coleções mutáveis (podem ser modificadas).
-* Usadas para armazenar sequências de elementos.
+* **Listas** são **estruturas de dados mutáveis**, ou seja, podem ser **alteradas após a criação** (podemos adicionar, remover ou modificar elementos).
+* São muito usadas quando precisamos armazenar uma **coleção de elementos** (valores, strings, números, até outras listas).
+* Os itens são **ordenados**: cada elemento possui um **índice** que indica sua posição (começando do **0**).
+
+---
+
+## 🔹 Principais características
+
+* **Mutáveis** → podem ser modificadas depois de criadas.
+* **Heterogêneas** → podem guardar diferentes tipos de dados (números, strings, objetos).
+* **Dinâmicas** → podem crescer ou diminuir de tamanho (com `append()`, `remove()`, etc).
+
+---
+
+## 🔹 Exemplo 1: Lista de nucleotídeos
 
 ```python
-# Exemplo: Lista de nucleotídeos
+# Criando uma lista
+nucleotideos = ["A", "T", "G", "C"]
+
+# Acessando o primeiro elemento (índice 0)
+print(nucleotideos[0])  # A
+
+# Adicionando um elemento ao final da lista
+nucleotideos.append("A")
+
+# Exibindo a lista modificada
+print(nucleotideos)  # ['A', 'T', 'G', 'C', 'A']
+```
+
+### Vamos detalhar? Veja a Explicação
+
+1. `nucleotideos = ["A", "T", "G", "C"]` → cria uma lista com os quatro nucleotídeos básicos do DNA.
+2. `nucleotideos[0]` → acessa o elemento de índice **0**, que é `"A"`.
+3. `nucleotideos.append("A")` → adiciona mais um `"A"` ao final da lista.
+4. `print(nucleotideos)` → exibe a lista completa já modificada.
+
+---
+
+## 🔹 Operações úteis com listas
+
+* **Acessar elementos**: `lista[indice]`
+* **Adicionar**: `lista.append(elemento)`
+* **Inserir em posição específica**: `lista.insert(pos, elemento)`
+* **Remover**: `lista.remove(elemento)` ou `lista.pop(indice)`
+* **Tamanho da lista**: `len(lista)`
+* **Verificar se um item está na lista**: `elemento in lista`
+
+---
+
+## Exemplo 2 (Biologia): Lista de genes expressos
+
+Imagine que você tenha uma lista com os nomes de alguns **genes expressos** em um experimento.
+
+```python
+genes_expressos = ["BRCA1", "TP53", "EGFR"]
+
+# Adicionando novos genes
+genes_expressos.append("MYC")
+genes_expressos.append("PTEN")
+
+print("Lista de genes:", genes_expressos)
+
+# Verificando se um gene está presente
+if "TP53" in genes_expressos:
+    print("O gene TP53 está presente na lista!")
+
+# Removendo um gene
+genes_expressos.remove("MYC")
+print("Após remoção:", genes_expressos)
+
+# Acessando um gene pelo índice
+print("Primeiro gene da lista:", genes_expressos[0])
+```
+
+### Saída esperada
+
+```
+Lista de genes: ['BRCA1', 'TP53', 'EGFR', 'MYC', 'PTEN']
+O gene TP53 está presente na lista!
+Após remoção: ['BRCA1', 'TP53', 'EGFR', 'PTEN']
+Primeiro gene da lista: BRCA1
+```
+
+## Exemplo 3 (Biologia): Exemplo: Lista de nucleotídeos
+```python
 nucleotideos = ["A", "T", "G", "C"]
 print(nucleotideos[0])  # A
 nucleotideos.append("A")
