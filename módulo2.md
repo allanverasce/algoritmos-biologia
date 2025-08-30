@@ -102,7 +102,7 @@ for i in range(len(dna) - len(motivo) + 1):
 print("Motivo encontrado nas posições:", posicoes)
 ```
 
-### Vamos Enteder! Veja a explicação passo a passo
+### Vamos Enteder? Segue a explicação passo a passo
 
 1. **Definição da sequência de DNA e do motivo**
 
