@@ -182,6 +182,28 @@ Usados para combinar condições.
 
 ---
 
+## Mais exemplos de funções Matemáticas
+
+Python possui funções matemáticas embutidas e também a biblioteca math para cálculos mais avançados.
+
+Função	Descrição	Exemplo
+- round(x, n)	Arredonda número para n casas decimais	round(3.14159, 2) → 3.14
+- abs(x)	Retorna o valor absoluto	abs(-10) → 10
+- pow(x, y) ou x ** y	Potência	pow(2,3) → 8
+- max(a, b, c)	Maior valor	max(4,7,2) → 7
+- min(a, b, c)	Menor valor	min(4,7,2) → 2
+
+Para usar a biblioteca math é necessário fazer o import, veja o exemplo:
+
+```
+import math
+
+print("Raiz quadrada:", math.sqrt(16))
+print("Número pi:", math.pi)
+print("Logaritmo natural de 10:", math.log(10))
+print("Seno de 90°:", math.sin(math.radians(90)))
+```
+
 Em resumo:
 
 * **Aritméticos** → fazem contas.
@@ -245,7 +267,7 @@ Escreva um programa que:
 
 ---
 
-## 7. Funções Úteis: Strings e Matemática
+## 7. Funções Úteis: Strings 
 
 ### Funções para Strings
 
@@ -271,28 +293,6 @@ print("Quantidade de A:", dna.count("a"))
 print("Posição da primeira ocorrência de G:", dna.find("g"))
 print("DNA para RNA:", dna.replace("t", "u"))
 print("Sequência invertida:", dna[::-1])
-```
-
-## Funções Matemáticas
-
-Python possui funções matemáticas embutidas e também a biblioteca math para cálculos mais avançados.
-
-Função	Descrição	Exemplo
-- round(x, n)	Arredonda número para n casas decimais	round(3.14159, 2) → 3.14
-- abs(x)	Retorna o valor absoluto	abs(-10) → 10
-- pow(x, y) ou x ** y	Potência	pow(2,3) → 8
-- max(a, b, c)	Maior valor	max(4,7,2) → 7
-- min(a, b, c)	Menor valor	min(4,7,2) → 2
-
-Para usar a biblioteca math é necessário fazer o import, veja o exemplo:
-
-```
-import math
-
-print("Raiz quadrada:", math.sqrt(16))
-print("Número pi:", math.pi)
-print("Logaritmo natural de 10:", math.log(10))
-print("Seno de 90°:", math.sin(math.radians(90)))
 ```
 
 ## Agora veja o exemplo utilizando formatação de Strings na mensagem e cálculos também
