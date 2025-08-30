@@ -66,6 +66,44 @@ while contador < 5:
     contador += 1
 ```
 
+###  Exemplo
+
+```python
+while True:
+    numero = int(input("Digite um número para calcular o quadrado: "))
+    print("O quadrado de", numero, "é", numero ** 2)
+
+    continuar = input("Deseja continuar? (s/n): ").lower()
+    if continuar != "s":
+        print("Encerrando o programa...")
+        break
+```
+
+---
+
+### Vamos entender? Veja a Explicação
+
+1. **`while True:`** → cria um loop infinito.
+2. O usuário digita um número, e o programa calcula o **quadrado**.
+3. O programa pergunta: `"Deseja continuar? (s/n):"`.
+
+   * Se o usuário responder **"s"**, o loop continua.
+   * Caso contrário, o `break` interrompe o loop e o programa encerra.
+
+---
+
+O que esperamos de resultado:
+
+```
+Digite um número para calcular o quadrado: 4
+O quadrado de 4 é 16
+Deseja continuar? (s/n): s
+Digite um número para calcular o quadrado: 7
+O quadrado de 7 é 49
+Deseja continuar? (s/n): n
+Encerrando o programa...
+```
+
 ## 3. Exemplos de Aplicações em Biologia
 **Exemplo Biológico 1:** </br>
 As estruturas de controle são úteis, por exemplo, para analisar sequências de DNA, buscar motivos ou percorrer listas de genes.
