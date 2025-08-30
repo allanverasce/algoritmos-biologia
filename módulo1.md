@@ -67,6 +67,129 @@ print("Divisão inteira:", a // b)
 print("Potência:", a ** b)
 print("Comparação:", a > b)
 ```
+
+##  **Operadores Aritméticos**
+
+São usados para realizar cálculos matemáticos.
+
+* **`+` (adição):** soma valores.
+
+  ```python
+  print(5 + 3)  # 8
+  ```
+
+* **`-` (subtração):** subtrai valores.
+
+  ```python
+  print(10 - 4)  # 6
+  ```
+
+* **`*` (multiplicação):** multiplica valores.
+
+  ```python
+  print(7 * 2)  # 14
+  ```
+
+* **`/` (divisão):** divide valores, sempre retorna número decimal (float).
+
+  ```python
+  print(10 / 3)  # 3.333...
+  ```
+
+* **`%` (módulo):** retorna o resto da divisão.
+
+  ```python
+  print(10 % 3)  # 1
+  ```
+
+* **`**` (exponenciação):** potência.
+
+  ```python
+  print(2 ** 3)  # 8
+  ```
+
+* **`//` (divisão inteira):** retorna apenas a parte inteira da divisão.
+
+  ```python
+  print(10 // 3)  # 3
+  ```
+
+---
+
+## **Operadores Relacionais**
+
+São usados para comparar valores. O resultado é sempre **True** (verdadeiro) ou **False** (falso).
+
+* **`==` (igualdade):** verifica se dois valores são iguais.
+
+  ```python
+  print(5 == 5)  # True
+  ```
+
+* **`!=` (diferente):** verifica se dois valores são diferentes.
+
+  ```python
+  print(5 != 3)  # True
+  ```
+
+* **`>` (maior que):**
+
+  ```python
+  print(10 > 7)  # True
+  ```
+
+* **`<` (menor que):**
+
+  ```python
+  print(3 < 8)  # True
+  ```
+
+* **`>=` (maior ou igual a):**
+
+  ```python
+  print(5 >= 5)  # True
+  ```
+
+* **`<=` (menor ou igual a):**
+
+  ```python
+  print(4 <= 2)  # False
+  ```
+
+---
+
+## **Operadores Lógicos**
+
+Usados para combinar condições.
+
+* **`and` (e):** retorna **True** apenas se **todas** as condições forem verdadeiras.
+
+  ```python
+  print(5 > 2 and 10 > 5)  # True
+  ```
+
+* **`or` (ou):** retorna **True** se **pelo menos uma** condição for verdadeira.
+
+  ```python
+  print(5 > 10 or 3 < 8)  # True
+  ```
+
+* **`not` (não):** inverte o valor lógico.
+
+  ```python
+  print(not (5 > 2))  # False
+  ```
+
+---
+
+Em resumo:
+
+* **Aritméticos** → fazem contas.
+* **Relacionais** → comparam valores.
+* **Lógicos** → combinam condições para decisões.
+
+---
+
 ## 3. Entrada e Saída de Dados
 
 Em Python usamos:
