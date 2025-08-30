@@ -101,25 +101,6 @@ for i in range(len(dna) - len(motivo) + 1):
 
 print("Motivo encontrado nas posições:", posicoes)
 ```
-Beleza, Allan 👌 Vou explicar passo a passo esse código em Python, que busca um **motivo** (padrão de sequência) dentro de uma string de DNA.
-
----
-
-### 🔹 O código
-
-```python
-dna = "ATGCGATGATGTAG"
-motivo = "ATG"
-posicoes = []
-
-for i in range(len(dna) - len(motivo) + 1):
-    if dna[i:i+len(motivo)] == motivo:
-        posicoes.append(i)
-
-print("Motivo encontrado nas posições:", posicoes)
-```
-
----
 
 ### Vamos Enteder! Veja a explicação passo a passo
 
