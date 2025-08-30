@@ -101,6 +101,89 @@ for i in range(len(dna) - len(motivo) + 1):
 
 print("Motivo encontrado nas posições:", posicoes)
 ```
+Beleza, Allan 👌 Vou explicar passo a passo esse código em Python, que busca um **motivo** (padrão de sequência) dentro de uma string de DNA.
+
+---
+
+### 🔹 O código
+
+```python
+dna = "ATGCGATGATGTAG"
+motivo = "ATG"
+posicoes = []
+
+for i in range(len(dna) - len(motivo) + 1):
+    if dna[i:i+len(motivo)] == motivo:
+        posicoes.append(i)
+
+print("Motivo encontrado nas posições:", posicoes)
+```
+
+---
+
+### Vamos Enteder! Veja a explicação passo a passo
+
+1. **Definição da sequência de DNA e do motivo**
+
+   ```python
+   dna = "ATGCGATGATGTAG"
+   motivo = "ATG"
+   ```
+
+   Aqui temos uma string representando o DNA (`dna`) e o **motivo** que queremos procurar (`ATG`).
+
+2. **Lista para armazenar posições**
+
+   ```python
+   posicoes = []
+   ```
+
+   Essa lista guardará os **índices** onde o motivo aparece dentro da sequência.
+
+3. **Laço `for` para percorrer a sequência**
+
+   ```python
+   for i in range(len(dna) - len(motivo) + 1):
+   ```
+
+   * `len(dna)` → comprimento da sequência (aqui, 14).
+   * `len(motivo)` → comprimento do motivo (aqui, 3).
+   * Subtraímos `len(motivo) - 1` porque não faz sentido começar a verificar quando não há espaço suficiente para caber o motivo.
+    Assim, o loop percorre todos os **pontos possíveis de início** do motivo dentro da sequência.
+
+4. **Verificação se o trecho é igual ao motivo**
+
+   ```python
+   if dna[i:i+len(motivo)] == motivo:
+   ```
+
+   * `dna[i:i+len(motivo)]` pega um **fatiamento** (slice) da sequência, começando na posição `i` e indo até `i+3`.
+   * Se esse trecho for igual ao motivo, encontramos uma ocorrência.
+
+5. **Armazenando a posição**
+
+   ```python
+   posicoes.append(i)
+   ```
+
+   Se encontrou, guarda a posição inicial (`i`) na lista.
+
+6. **Resultado final**
+
+   ```python
+   print("Motivo encontrado nas posições:", posicoes)
+   ```
+
+   Exibe a lista com todas as posições.
+   Para esse exemplo, a saída será:
+
+   ```
+   Motivo encontrado nas posições: [0, 5, 8]
+   ```
+
+   Isso significa que o motivo **"ATG"** aparece nas posições **0, 5 e 8** da string.
+
+---
 
 ## 4. Vamos treinar? --> Exercício Prático
 
