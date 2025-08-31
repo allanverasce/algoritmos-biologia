@@ -14,7 +14,7 @@ Este módulo introduz as **estruturas de dados fundamentais do Python** (listas,
 
 ---
 
-## 🔹 Principais características
+## Principais características
 
 * **Mutáveis** → podem ser modificadas depois de criadas.
 * **Heterogêneas** → podem guardar diferentes tipos de dados (números, strings, objetos).
@@ -22,7 +22,7 @@ Este módulo introduz as **estruturas de dados fundamentais do Python** (listas,
 
 ---
 
-## 🔹 Exemplo 1: Lista de nucleotídeos
+## Exemplo 1: Lista de nucleotídeos
 
 ```python
 # Criando uma lista
@@ -47,7 +47,7 @@ print(nucleotideos)  # ['A', 'T', 'G', 'C', 'A']
 
 ---
 
-## 🔹 Operações úteis com listas
+##  Operações úteis com listas
 
 * **Acessar elementos**: `lista[indice]`
 * **Adicionar**: `lista.append(elemento)`
@@ -143,8 +143,8 @@ tupla_dna = ("A", "T", "G", "C")
 # tupla_dna.append("A")  # ERRO! Não é permitido
 ```
 ## Dica do Allan kkkk
-Use **lista** se os dados mudam.
-Use **tupla** se os dados devem ser **fixos e protegidos**.
+- Use **lista** se os dados mudam.
+- Use **tupla** se os dados devem ser **fixos e protegidos**.
 
 ---
 
