@@ -367,24 +367,65 @@ Códon ATG traduz para: Met
 
 ---
 
-## 2. Leitura e Escrita de Arquivos
+#  Leitura e Escrita de Arquivos em Python
 
-### **Arquivos TXT**
+Em Python usamos a função **`open()`** para abrir arquivos.
+A sintaxe geral é:
 
 ```python
-# Escrevendo em um TXT
+with open("nome_arquivo.txt", "modo") as f:
+    # operações no arquivo
+```
+
+* `"w"` → modo **escrita** (cria/reescreve o arquivo).
+* `"r"` → modo **leitura**.
+* `"a"` → modo **append** (adiciona ao final).
+
+O uso do **`with`** é importante porque garante que o arquivo seja **fechado automaticamente** ao final, evitando erros.
+
+---
+
+##  1. Arquivos **TXT**
+
+São arquivos de texto simples, muito usados para guardar uma sequência ou resultados curtos.
+
+###  Exemplo: Escrever e ler uma sequência de DNA
+
+```python
+# Escrevendo em um arquivo TXT
 with open("sequencia.txt", "w") as f:
     f.write("ATGCGTA")
 
-# Lendo o TXT
+# Lendo do arquivo TXT
 with open("sequencia.txt", "r") as f:
     seq = f.read()
-print(seq)
+
+print("Sequência lida:", seq)
 ```
 
-### **Arquivos CSV**
+###  Explicação:
 
-Úteis para tabelas de resultados (ex.: contagem de nucleotídeos em várias sequências).
+1. O programa cria o arquivo `sequencia.txt` e escreve a string `"ATGCGTA"`.
+2. Depois, abre o arquivo em modo leitura (`"r"`) e lê todo o conteúdo com `.read()`.
+3. O resultado é exibido no terminal.
+
+ Saída:
+
+```
+Sequência lida: ATGCGTA
+```
+
+ Uso em biologia: salvar **sequências individuais** ou **resultados curtos** de análises.
+
+---
+
+##  2. Arquivos **CSV**
+
+* CSV significa **Comma-Separated Values** (valores separados por vírgula).
+* É muito usado para **tabelas de resultados**, por exemplo, contagem de nucleotídeos em várias sequências.
+* Python tem a biblioteca `csv` que facilita a manipulação.
+
+###  Exemplo: Frequência GC em diferentes sequências
 
 ```python
 import csv
@@ -392,7 +433,7 @@ import csv
 # Escrevendo CSV
 with open("resultados.csv", "w", newline="") as f:
     writer = csv.writer(f)
-    writer.writerow(["Sequência", "GC_Content"])
+    writer.writerow(["Sequência", "GC_Content"])  # Cabeçalho
     writer.writerow(["Seq1", 0.55])
     writer.writerow(["Seq2", 0.62])
 
@@ -403,20 +444,91 @@ with open("resultados.csv", "r") as f:
         print(row)
 ```
 
-### **Arquivos FASTA**
+###  Explicação:
 
-Formato padrão em bioinformática para armazenar sequências.
+1. Criamos o arquivo `resultados.csv`.
+2. `writer.writerow([...])` escreve uma linha no arquivo (pode ser cabeçalho ou dados).
+3. Ao ler o arquivo, usamos `csv.reader(f)` para iterar pelas linhas.
+
+ Saída:
+
+```
+['Sequência', 'GC_Content']
+['Seq1', '0.55']
+['Seq2', '0.62']
+```
+
+ Uso em biologia: armazenar **tabelas de frequências**, **níveis de expressão gênica**, **resultados de análises em várias amostras**.
+
+---
+
+##  3. Arquivos **FASTA**
+
+* Formato padrão em **bioinformática** para armazenar sequências de DNA, RNA ou proteínas.
+* Estrutura:
+
+  ```
+  >identificador_da_sequência
+  ATGCGTAGCTA...
+  ```
+* Cada sequência começa com uma linha de cabeçalho (`>`), seguida pela sequência.
+
+###  Exemplo: Leitura simples de FASTA
 
 ```python
-# Exemplo de leitura simples de um FASTA
+# Exemplo de leitura de um arquivo FASTA
 with open("exemplo.fasta", "r") as f:
     for linha in f:
         if not linha.startswith(">"):  # Ignora cabeçalhos
-            seq = linha.strip()
+            seq = linha.strip()        # Remove espaços e quebras de linha
             print(seq)
 ```
 
+###  Explicação:
+
+1. Abre o arquivo `exemplo.fasta`.
+2. Percorre cada linha.
+3. Se a linha **não começar com `>`**, significa que é sequência (não cabeçalho).
+4. Exibe a sequência.
+
+Exemplo de entrada (`exemplo.fasta`):
+
+```
+>seq1
+ATGCGTA
+>seq2
+TTGCAAGT
+```
+
+Saída esperada:
+
+```
+ATGCGTA
+TTGCAAGT
+```
+
+ Uso em biologia: manipular **sequências reais** de DNA/proteína.
+
 ---
+
+#  Resumindo
+
+| Formato   | Uso principal                                            | Exemplo em Biologia                     |
+| --------- | -------------------------------------------------------- | --------------------------------------- |
+| **TXT**   | Texto simples, sequências pequenas ou resultados rápidos | Guardar uma sequência de DNA            |
+| **CSV**   | Tabelas de dados, fácil de abrir no Excel                | Tabela de frequências, expressão gênica |
+| **FASTA** | Padrão bioinformática, sequências biológicas             | Genomas, genes, proteínas               |
+
+---
+
+**Conclusão:**
+
+* Use **TXT** para informações simples.
+* Use **CSV** para tabelas e resultados comparativos.
+* Use **FASTA** para **sequências biológicas**, pois é padrão universal em bioinformática.
+
+---
+
 
 ## 3. Manipulação de Sequências Biológicas com Strings
 
