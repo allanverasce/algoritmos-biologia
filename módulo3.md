@@ -198,19 +198,172 @@ Contagem (A, T, G, C): (3, 3, 2, 2)
   * **Pares de bases** ou **motivos conservados**.
   * **Resultados imutáveis** de funções (como contagens de nucleotídeos).
 
+---
 
+#  O que são **Dicionários** em Python?
 
+* Um **dicionário** é uma estrutura de dados que **armazenada pares chave–valor**.
+* A ideia é: cada **chave** funciona como um "rótulo" que aponta para um **valor** associado.
+* Sintaxe: `{chave: valor, chave: valor, ...}`
 
-### **Dicionários**
+ Diferente de listas e tuplas (que acessamos pelo índice), nos dicionários acessamos os elementos pela **chave**.
 
-* Armazenam pares chave-valor.
-* Muito úteis para representar **contagens de nucleotídeos** ou **mapeamentos de genes**.
+---
+
+## Características importantes
+
+1. **Chaves únicas:** cada chave aparece apenas uma vez.
+2. **Valores podem se repetir:** mas a chave não.
+3. **Mutáveis:** podemos adicionar, remover ou alterar elementos.
+4. **Muito úteis em bioinformática** → porque podemos mapear **genes, nucleotídeos, proteínas, contagens, anotações, etc.**
+
+---
+
+##  Exemplo 1: Frequência de nucleotídeos
 
 ```python
-# Exemplo: Frequência de nucleotídeos
 freq = {"A": 10, "T": 5, "G": 8, "C": 7}
-print(freq["A"])  # 10
+
+print("Frequência de A:", freq["A"])  # 10
+
+# Alterando valores
+freq["T"] = 6
+print("Nova frequência de T:", freq["T"])  # 6
+
+# Adicionando chave nova
+freq["N"] = 2
+print(freq)
 ```
+Esse dicionário associa cada nucleotídeo à sua contagem em uma sequência.
+
+---
+
+## Exemplo 2: Frequência de nucleotídeos em uma sequência de DNA
+
+```python
+dna = "ATGCGATATGCGAAA"
+
+# Criando um dicionário vazio
+freq = {}
+
+for base in dna:
+    if base in freq:
+        freq[base] += 1  # soma +1 se a base já existir
+    else:
+        freq[base] = 1   # cria a chave se ainda não existir
+
+print("Frequência de nucleotídeos:", freq)
+```
+
+Saída esperada (Nota : pode variar dependendo da sequência):
+
+```
+Frequência de nucleotídeos: {'A': 6, 'T': 3, 'G': 3, 'C': 3}
+```
+
+---
+
+##  Exemplo 3: Mapeando genes a funções
+
+Um dicionário pode relacionar **genes** aos seus **papéis biológicos**.
+
+```python
+genes = {
+    "BRCA1": "Reparo de DNA",
+    "TP53": "Supressor tumoral",
+    "EGFR": "Receptor de crescimento celular",
+    "MYC": "Regulação da transcrição"
+}
+
+print("Função do TP53:", genes["TP53"])
+```
+
+Saída Esperada:
+
+```
+Função do TP53: Supressor tumoral
+```
+
+---
+
+##  Exemplo 4: Posições de um motivo em uma sequência
+
+Um dicionário pode guardar a posição de um **motivo de DNA**.
+
+```python
+dna = "ATGCGATGATGTAG"
+motivo = "ATG"
+posicoes = {}
+
+for i in range(len(dna) - len(motivo) + 1):
+    if dna[i:i+len(motivo)] == motivo:
+        posicoes[i] = motivo
+
+print("Posições do motivo:", posicoes)
+```
+
+Saída esperada:
+
+```
+Posições do motivo: {0: 'ATG', 5: 'ATG', 8: 'ATG'}
+```
+
+---
+
+## Exemplo 5: Dicionário aninhado (genes e expressão)
+
+Dicionários podem conter **outros dicionários**, representando dados mais complexos.
+
+```python
+expressao_genica = {
+    "BRCA1": {"condição_controle": 50, "condição_tratamento": 80},
+    "TP53": {"condição_controle": 70, "condição_tratamento": 65},
+    "EGFR": {"condição_controle": 40, "condição_tratamento": 100}
+}
+
+# Acessando valores específicos
+print("Expressão de BRCA1 no tratamento:", expressao_genica["BRCA1"]["condição_tratamento"])
+```
+
+ Saída:
+
+```
+Expressão de BRCA1 no tratamento: 80
+```
+
+---
+
+##  Exemplo 6: Tradução de DNA → aminoácidos
+
+Um dicionário pode guardar o **código genético**.
+
+```python
+codon_table = {
+    "ATG": "Met", "TGG": "Trp",
+    "TAA": "Stop", "TAG": "Stop", "TGA": "Stop"
+}
+
+print("Códon ATG traduz para:", codon_table["ATG"])
+```
+
+Saída esperada:
+
+```
+Códon ATG traduz para: Met
+```
+
+---
+
+#  Resumindo
+
+* **Dicionários** armazenam **pares chave–valor**.
+* São ideais para dados que possuem **identificadores únicos** (genes, códons, nucleotídeos, proteínas).
+* Em **biologia**, podem ser usados para:
+
+  * Contar nucleotídeos ou aminoácidos.
+  * Mapear genes para funções ou níveis de expressão.
+  * Guardar tabelas como o **código genético**.
+  * Armazenar **resultados de análises** (frequências, posições, anotações).
 
 ---
 
