@@ -92,6 +92,67 @@ Após remoção: ['BRCA1', 'TP53', 'EGFR', 'PTEN']
 Primeiro gene da lista: BRCA1
 ```
 
+## Vamos entender o passo a passo?
+
+1. **Cria a lista inicial de genes**
+
+```python
+genes_expressos = ["BRCA1", "TP53", "EGFR"]
+```
+
+Isto define uma *lista* de strings com três elementos, na ordem dada.
+
+2. **Adiciona novos genes ao final da lista**
+
+```python
+genes_expressos.append("MYC")
+genes_expressos.append("PTEN")
+```
+
+`list.append(x)` insere o item `x` **no fim** da lista, Mega Importante isto. Depois das duas chamadas, a lista vira `["BRCA1", "TP53", "EGFR", "MYC", "PTEN"]`.
+
+3. **Imprime a lista atual**
+
+```python
+print("Lista de genes:", genes_expressos)
+```
+
+4. **Verifica se um gene está presente**
+
+```python
+if "TP53" in genes_expressos:
+    print("O gene TP53 está presente na lista!")
+```
+
+O operador de *pertinência* esta presente na LISTA ->> `in` retorna `True` se o item existir na sequência. Como `"TP53"` está na lista, a condição é verdadeira e a mensagem é impressa.
+
+5. **Remove um gene específico**
+
+```python
+genes_expressos.remove("MYC")
+print("Após remoção:", genes_expressos)
+```
+
+`list.remove(x)` **remove a primeira ocorrência** de `x` na lista. Se `x` não existir, lança `ValueError`. Aqui, `"MYC"` é removido e a lista passa a `["BRCA1", "TP53", "EGFR", "PTEN"]`. 
+
+6. **Acessa um gene pelo índice**
+
+```python
+print("Primeiro gene da lista:", genes_expressos[0])
+```
+Em sequências Python, `s[i]` acessa o **i-ésimo item** começando em **0**. Logo, `genes_expressos[0]` é o primeiro elemento, `"BRCA1"`.
+
+---
+
+### Saída esperada no console
+
+```
+Lista de genes: ['BRCA1', 'TP53', 'EGFR', 'MYC', 'PTEN']
+O gene TP53 está presente na lista!
+Após remoção: ['BRCA1', 'TP53', 'EGFR', 'PTEN']
+Primeiro gene da lista: BRCA1
+```
+
 #  O que são **Tuplas** em Python?
 
 * Uma **tupla** é uma **coleção ordenada de elementos**, muito parecida com uma **lista**.
