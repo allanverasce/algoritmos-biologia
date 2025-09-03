@@ -144,14 +144,6 @@ Em sequências Python, `s[i]` acessa o **i-ésimo item** começando em **0**. Lo
 
 ---
 
-### Saída esperada no console
-
-```
-Lista de genes: ['BRCA1', 'TP53', 'EGFR', 'MYC', 'PTEN']
-O gene TP53 está presente na lista!
-Após remoção: ['BRCA1', 'TP53', 'EGFR', 'PTEN']
-Primeiro gene da lista: BRCA1
-```
 
 #  O que são **Tuplas** em Python?
 
