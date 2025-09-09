@@ -180,7 +180,8 @@ import matplotlib.pyplot as plt
 * **Bio.Seq (Biopython)**: fornece a classe `Seq` para representar e manipular sequências biológicas (DNA, RNA e proteínas).
 * **pandas**: facilita a criação e manipulação de tabelas de dados.
 * **matplotlib.pyplot**: usado para criar gráficos.
-**Nota:** Caso na tua estrutura não rode de primeira, veja se precisa instalar os pacotes, se estiver usando a estrutura do google, tente `!pip install <nomeDopacote>
+* **Nota:** Caso na tua estrutura não rode de primeira, veja se precisa instalar os pacotes, se estiver usando a estrutura do google, tente `!pip install <nomeDopacote>`
+  
 ---
 
 ### 2. Criação da sequência de DNA
