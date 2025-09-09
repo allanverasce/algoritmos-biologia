@@ -166,6 +166,100 @@ print("Proteína traduzida:", protein_seq)
 print(df)
 ```
 
+---
+# Vamos detalhar a explicação? Veja ai.
+
+### 1. Importação das bibliotecas
+
+```python
+from Bio.Seq import Seq
+import pandas as pd
+import matplotlib.pyplot as plt
+```
+
+* **Bio.Seq (Biopython)**: fornece a classe `Seq` para representar e manipular sequências biológicas (DNA, RNA e proteínas).
+* **pandas**: facilita a criação e manipulação de tabelas de dados.
+* **matplotlib.pyplot**: usado para criar gráficos.
+**Nota:** Caso na tua estrutura não rode de primeira, veja se precisa instalar os pacotes, se estiver usando a estrutura do google, tente `!pip install <nomeDopacote>
+---
+
+### 2. Criação da sequência de DNA
+
+```python
+dna_seq = Seq("ATGGCCATTGTAATGGGCCGCTGAAAGGGTGCCCGATAG")
+```
+
+Aqui, é criada uma **sequência de DNA fictícia**. Essa sequência é armazenada como um objeto `Seq` da Biopython.
+
+---
+
+### 3. Tradução para proteína
+
+```python
+protein_seq = dna_seq.translate()
+```
+
+O método `.translate()` converte a sequência de DNA em **sequência de aminoácidos** (proteína), usando o código genético padrão (trinca de nucleotídeos → aminoácido).
+
+Por exemplo:
+
+* **ATG** → Metionina (M)
+* **GCC** → Alanina (A)
+* **ATT** → Isoleucina (I)
+
+---
+
+### 4. Contagem da frequência dos aminoácidos
+
+```python
+freq = {}
+for aa in protein_seq:
+    freq[aa] = freq.get(aa, 0) + 1
+```
+
+* Percorre cada aminoácido da proteína.
+* Conta quantas vezes cada um aparece, armazenando no dicionário `freq`.
+
+---
+
+### 5. Conversão para DataFrame
+
+```python
+df = pd.DataFrame(list(freq.items()), columns=["Aminoácido", "Frequência"])
+```
+
+* Transforma o dicionário `freq` em uma tabela (`DataFrame`).
+* Cada linha mostra um aminoácido e sua frequência.
+
+---
+
+### 6. Visualização em gráfico
+
+```python
+plt.bar(df["Aminoácido"], df["Frequência"], color="blue")
+plt.xlabel("Aminoácidos")
+plt.ylabel("Frequência")
+plt.title("Frequência de aminoácidos traduzidos")
+plt.show()
+```
+
+* Cria um **gráfico de barras** mostrando a frequência de cada aminoácido encontrado na proteína.
+* O eixo X mostra os aminoácidos, e o eixo Y mostra quantas vezes eles aparecem.
+
+---
+
+### 7. Impressão dos resultados
+
+```python
+print("Proteína traduzida:", protein_seq)
+print(df)
+```
+
+* Exibe a **sequência proteica completa**.
+* Mostra a tabela de aminoácidos com suas frequências.
+
+---
+
  **Resultado esperado**:
 
 * Impressão da sequência traduzida (proteína).
