@@ -1,4 +1,4 @@
-# 🐍 Criação de Módulos em Python e Uso em Outros Scripts
+#  Criação de Módulos em Python e Uso em Outros Scripts
 
 ##  O que é um módulo?
 
