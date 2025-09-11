@@ -125,7 +125,7 @@ Se mudarmos os pesos (por exemplo, gap = -2 em vez de -1), como o alinhamento fi
 ---
 
 
-# **Algoritmo 2: Guloso para Montagem **
+# Algoritmo 2: Guloso para Montagem 
 
 Imagine que temos estas **reads curtas** de uma sequência de DNA:
 
