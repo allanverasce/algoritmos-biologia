@@ -124,4 +124,4 @@ Se mudarmos os pesos (por exemplo, gap = -2 em vez de -1), como o alinhamento fi
 
 ---
 
-Quer que eu prepare também uma **versão com visualização gráfica da matriz (heatmap com matplotlib)** para deixar mais didático em sala?
+
