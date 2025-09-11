@@ -246,5 +246,105 @@ Sequência montada: ATTAGACCTTGA
 * Ele é uma **introdução conceitual**, mas genomas reais requerem algoritmos mais sofisticados (SPAdes, Velvet, etc.).
 ---
 
+# Algoritmo 3: Busca Binária em Genes 
+
+* Bancos de genes podem ter **milhares ou milhões de entradas**.
+
+* Se procurássemos **sequencialmente**, levando um gene por vez, seria **muito lento**.
+
+* Exemplo:
+
+  ```
+  genes = ["BRCA1", "CFTR", "HBB", "TP53"]
+  ```
+
+  * Se quisermos encontrar `"TP53"`, procurar elemento por elemento funciona aqui, mas **não escala** para milhares de genes.
+
+* **Solução:** usar **busca binária**, que corta a lista ao meio a cada passo, encontrando o gene rapidamente.
+
+---
+
+## 2. Ideia da busca binária
+
+1. Lista precisa estar **ordenada**.
+2. Comparar o **alvo** com o elemento do **meio** da lista.
+3. Três possibilidades:
+
+   * Igual → encontramos o gene 
+   * Alvo > meio → procurar **metade direita** da lista
+   * Alvo < meio → procurar **metade esquerda** da lista
+4. Repetir até encontrar ou a lista acabar.
+
+**Analogia:** procurar uma palavra em um dicionário. 
+
+---
+
+## 3. Implementação em Python (simples)
+
+```python
+# Lista de genes
+genes = ["BRCA1", "CFTR", "HBB", "TP53"]
+
+# Ordenar a lista
+genes.sort()  # ['BRCA1', 'CFTR', 'HBB', 'TP53']
+
+# Função de busca binária
+def busca_binaria(lista, alvo):
+    inicio, fim = 0, len(lista)-1
+    while inicio <= fim:
+        meio = (inicio + fim) // 2
+        if lista[meio] == alvo:
+            return meio  # Encontrou
+        elif lista[meio] < alvo:
+            inicio = meio + 1  # Buscar na metade direita
+        else:
+            fim = meio - 1  # Buscar na metade esquerda
+    return -1  # Não encontrou
+
+# Teste
+indice = busca_binaria(genes, "TP53")
+print("Índice de TP53:", indice)
+```
+
+**Saída esperada:**
+
+```
+Índice de TP53: 3
+```
+
+---
+
+## 4. Atividade prática para os alunos (10 min)
+
+1. Pedir que adicionem novos genes à lista:
+
+```python
+genes += ["MYC", "EGFR", "VEGFA"]
+```
+
+2. Ordenar a lista novamente:
+
+```python
+genes.sort()
+```
+
+3. Testar a busca binária para encontrar diferentes genes, por exemplo:
+
+```python
+print(busca_binaria(genes, "EGFR"))
+print(busca_binaria(genes, "BRCA1"))
+```
+
+
+### Resumo
+
+* **Busca binária** é eficiente e funciona **apenas em listas ordenadas**.
+* Reduz drasticamente o número de comparações necessárias.
+* Muito usada em bioinformática para **procurar genes, proteínas ou sequências específicas em grandes bancos de dados**.
+---
+
+
+
+
 
 
